@@ -88,7 +88,8 @@
     <ClCompile Include="PerfTimer.cpp" />
     <ClCompile Include="Render.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="TestingScene.cpp" />
+    <ClCompile Include="Scene_01.cpp" />
+    <ClCompile Include="Scene_02.cpp" />
     <ClCompile Include="Textures.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Transition.cpp" />
@@ -113,7 +114,8 @@
     <ClInclude Include="p2Point.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="TestingScene.h" />
+    <ClInclude Include="Scene_01.h" />
+    <ClInclude Include="Scene_02.h" />
     <ClInclude Include="Textures.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Transition.h" />

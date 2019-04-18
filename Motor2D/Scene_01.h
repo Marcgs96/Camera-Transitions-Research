@@ -1,17 +1,12 @@
-#ifndef _TESTING_SCENE_H_
-#define _TESTING_SCENE_H_
-
+#pragma once
 #include "Scene.h"
-#include "p2Point.h"
-
-struct SDL_Texture;
-
-class TestingScene :
+class Scene_01 :
 	public Scene
 {
 public:
-	TestingScene();
-	~TestingScene();
+
+	Scene_01();
+	~Scene_01();
 
 	// Called before the first frame
 	virtual bool Start();
@@ -28,6 +23,7 @@ public:
 	// Called before quitting
 	virtual bool CleanUp();
 
+private:
+	int start_camera_x = 425;
 };
 
-#endif

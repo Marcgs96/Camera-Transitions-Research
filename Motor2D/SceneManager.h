@@ -5,10 +5,8 @@
 #include "Scene.h"
 
 enum SceneType{
-	MENU,
-	MAP,
-	COMBAT,
-	TESTING
+	SCENE_01,
+	SCENE_02
 };
 
 class SceneManager :

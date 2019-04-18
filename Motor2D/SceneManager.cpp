@@ -1,4 +1,5 @@
-#include "TestingScene.h"
+#include "Scene_01.h"
+#include "Scene_02.h"
 #include "SceneManager.h"
 
 
@@ -16,7 +17,7 @@ SceneManager::~SceneManager()
 
 bool SceneManager::Awake(pugi::xml_node &)
 {
-	current_scene = new TestingScene();
+	current_scene = new Scene_01();
 	return true;
 }
 
@@ -69,14 +70,11 @@ void SceneManager::ChangeScene(int new_scene)
 
 	switch (new_scene)
 	{
-	case MENU:
+	case SCENE_01:
+		current_scene = new Scene_01();
 		break;
-	case MAP:
-		break;
-	case COMBAT:
-		break;
-	case TESTING:
-		current_scene = new TestingScene();
+	case SCENE_02:
+		current_scene = new Scene_02();
 		break;
 	}
 

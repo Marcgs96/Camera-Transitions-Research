@@ -34,9 +34,6 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Engine\Modules</Filter>
     </ClCompile>
-    <ClCompile Include="TestingScene.cpp">
-      <Filter>Engine\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="PerfTimer.cpp">
       <Filter>Engine\Others</Filter>
     </ClCompile>
@@ -60,6 +57,12 @@
     </ClCompile>
     <ClCompile Include="Color.cpp">
       <Filter>Engine\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_01.cpp">
+      <Filter>Engine\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_02.cpp">
+      <Filter>Engine\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -108,9 +111,6 @@
     <ClInclude Include="SceneManager.h">
       <Filter>Engine\Modules</Filter>
     </ClInclude>
-    <ClInclude Include="TestingScene.h">
-      <Filter>Engine\Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="PerfTimer.h">
       <Filter>Engine\Others</Filter>
     </ClInclude>
@@ -134,6 +134,12 @@
     </ClInclude>
     <ClInclude Include="Color.h">
       <Filter>Engine\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_01.h">
+      <Filter>Engine\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_02.h">
+      <Filter>Engine\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -48,8 +48,8 @@ void Zoom::Exiting()
 {
 	Transition::Exiting();
 
-	current_scale = normal_scale;
-	SDL_RenderSetScale(App->render->renderer, normal_scale, normal_scale);
+	//current_scale = normal_scale;
+	//SDL_RenderSetScale(App->render->renderer, normal_scale, normal_scale);
 }
 
 void Zoom::SetTargetScale(int target_scale)
