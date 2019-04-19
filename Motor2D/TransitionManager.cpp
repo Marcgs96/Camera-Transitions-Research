@@ -65,9 +65,9 @@ void TransitionManager::CreateCameraTranslation(float transition_time, iPoint de
 	active_transitions.push_back(new CameraTranslation(transition_time, destination));
 }
 
-void TransitionManager::CreateBarsTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
+void TransitionManager::CreateBarsTransition(float transition_time, bool is_scene_change, int scene_to_transition, bool horizontal,  Color color)
 {
-	active_transitions.push_back(new Bars(transition_time, is_scene_change, scene_to_transition, color));
+	active_transitions.push_back(new Bars(transition_time, is_scene_change, scene_to_transition, horizontal, color));
 }
 
 void TransitionManager::CreateWipeTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)

@@ -8,7 +8,7 @@
 
 
 
-Bars::Bars(float transition_time, bool is_scene_change, int scene_to_change, Color color) : Transition(transition_time)
+Bars::Bars(float transition_time, bool is_scene_change, int scene_to_change, bool horizontal, Color color) : Transition(transition_time)
 {
 	this->is_scene_change = is_scene_change;
 	this->scene_to_change = scene_to_change;
@@ -17,14 +17,30 @@ Bars::Bars(float transition_time, bool is_scene_change, int scene_to_change, Col
 	App->win->GetWindowSize(width, height);
 	SDL_SetRenderDrawBlendMode(App->render->renderer, SDL_BLENDMODE_BLEND);
 
-	square_width = (int)width / 16;
-	square_height = (int)height / 9;
+	if (horizontal) {
 
-	for (int x = 0; x < 16; x++)
-	{
-		for (int y = 0; y < 9; y++)
+		square_width = (int)((width / 9)+1);
+		square_height = (int)(height / 16);
+
+		for (int y = 0; y < 16; y++)
 		{
-			positions.push_back({(int)(x*square_width), (int)(y*square_height) });
+			for (int x = 0; x < 9; x++)
+			{
+				positions.push_back({ (int)(x*square_width), (int)(y*square_height) });
+
+			}
+		}
+	}
+	else {
+		square_width = (int)width / 16;
+		square_height = (int)((height / 9)+1);
+
+		for (int x = 0; x < 16; x++)
+		{
+			for (int y = 0; y < 9; y++)
+			{
+				positions.push_back({ (int)(x*square_width), (int)(y*square_height) });
+			}
 		}
 	}
 }

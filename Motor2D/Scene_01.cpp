@@ -50,7 +50,7 @@ bool Scene_01::PreUpdate()
 		App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_02, Black);	
 
 	if (App->input->GetKey(SDL_SCANCODE_5) == KEY_DOWN)
-		App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_02, Black);
+		App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_02, true, Black);
 
 	return true;
 }

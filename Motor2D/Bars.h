@@ -15,7 +15,7 @@ private:
 	std::vector<iPoint>positions;
 
 public:
-	Bars(float transition_time, bool is_scene_change = false, int scene_to_change = 0, Color color = Black);
+	Bars(float transition_time, bool is_scene_change = false, int scene_to_change = 0, bool horizontal = false, Color color = Black);
 	~Bars();
 
 	void Entering();
