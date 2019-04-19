@@ -64,6 +64,7 @@
     <ClCompile Include="Scene_02.cpp">
       <Filter>Engine\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Wipe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -141,6 +142,7 @@
     <ClInclude Include="Scene_02.h">
       <Filter>Engine\Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="Wipe.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">

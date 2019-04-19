@@ -44,7 +44,10 @@ bool Scene_01::PreUpdate()
 		App->transition_manager->CreateZoomTransition(2.0F, 4.0F);
 
 	if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN)
-		App->transition_manager->CreateCameraTranslation(2.0F, world_mouse_position);
+		App->transition_manager->CreateCameraTranslation(2.0F, world_mouse_position);	
+	
+	if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
+		App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_02, Black);
 
 	return true;
 }
