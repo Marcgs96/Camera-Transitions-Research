@@ -24,7 +24,7 @@ Scene_02::~Scene_02()
 
 bool Scene_02::Start()
 {
-	App->map->Load("iso_walk.tmx");
+	App->map->Load("scene_02.tmx");
 	App->render->camera.x = start_camera_x;
 	return true;
 }
@@ -44,7 +44,6 @@ bool Scene_02::PreUpdate()
 
 	if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN)
 		App->transition_manager->CreateCameraTranslation(2.0F, world_mouse_position);
-
 
 	if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
 		App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_01, Black);

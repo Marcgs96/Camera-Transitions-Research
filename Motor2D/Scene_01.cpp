@@ -24,7 +24,7 @@ Scene_01::~Scene_01()
 
 bool Scene_01::Start()
 {
-	App->map->Load("iso_walk.tmx");
+	App->map->Load("scene_01.tmx");
 	App->render->camera.x = start_camera_x;
 
 	return true;
