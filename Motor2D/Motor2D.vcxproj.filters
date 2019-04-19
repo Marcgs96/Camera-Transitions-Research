@@ -70,6 +70,7 @@
     <ClCompile Include="Wipe.cpp">
       <Filter>Engine\Transitions</Filter>
     </ClCompile>
+    <ClCompile Include="Squares.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -153,6 +154,7 @@
     <ClInclude Include="Wipe.h">
       <Filter>Engine\Transitions</Filter>
     </ClInclude>
+    <ClInclude Include="Squares.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">

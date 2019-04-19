@@ -4,6 +4,7 @@
 #include "Wipe.h"
 #include "Bars.h"
 #include "CameraTranslation.h"
+#include "Squares.h"
 #include "j1App.h"
 #include "Render.h"
 #include "Window.h"
@@ -73,6 +74,11 @@ void TransitionManager::CreateBarsTransition(float transition_time, bool is_scen
 void TransitionManager::CreateWipeTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
 {
 	active_transitions.push_back(new Wipe(transition_time, is_scene_change, scene_to_transition, color));
+}
+
+void TransitionManager::CreateSquaresTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
+{
+	active_transitions.push_back(new Squares(transition_time, is_scene_change, scene_to_transition, color));
 }
 
 void TransitionManager::DestroyTransition(Transition * transition_to_destroy)
