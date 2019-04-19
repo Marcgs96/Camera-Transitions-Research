@@ -2,6 +2,7 @@
 #include "Fade.h"
 #include "Zoom.h"
 #include "Wipe.h"
+#include "Bars.h"
 #include "CameraTranslation.h"
 #include "j1App.h"
 #include "Render.h"
@@ -62,6 +63,11 @@ void TransitionManager::CreateZoomTransition(float transition_time, float scale)
 void TransitionManager::CreateCameraTranslation(float transition_time, iPoint destination)
 {
 	active_transitions.push_back(new CameraTranslation(transition_time, destination));
+}
+
+void TransitionManager::CreateBarsTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
+{
+	active_transitions.push_back(new Bars(transition_time, is_scene_change, scene_to_transition, color));
 }
 
 void TransitionManager::CreateWipeTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)

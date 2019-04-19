@@ -37,7 +37,7 @@ bool Scene_02::PreUpdate()
 	iPoint world_mouse_position = App->render->ScreenToWorld(mouse_x, mouse_y);
 
 	if (App->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN)
-		App->transition_manager->CreateFadeTransition(2.0F, true, SCENE_02, Black);
+		App->transition_manager->CreateFadeTransition(1.0F, true, SCENE_01, Black);
 
 	if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN)
 		App->transition_manager->CreateZoomTransition(2.0F, 4.0F);
@@ -47,7 +47,10 @@ bool Scene_02::PreUpdate()
 
 
 	if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
-		App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_02, Black);
+		App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_01, Black);
+
+	if (App->input->GetKey(SDL_SCANCODE_5) == KEY_DOWN)
+		App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_01, Black);
 
 	return true;
 }

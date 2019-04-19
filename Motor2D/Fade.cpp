@@ -34,14 +34,14 @@ void Fade::Entering()
 
 void Fade::Action()
 {
-	Transition::Action();
-
 	DrawFadeRect(255.0F);
 
 	if (is_scene_change)
 	{
 		App->scene_manager->ChangeScene(scene_to_change);
 	}
+
+	Transition::Action();
 }
 
 void Fade::Exiting()

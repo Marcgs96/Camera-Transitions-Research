@@ -65,6 +65,7 @@
       <Filter>Engine\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Wipe.cpp" />
+    <ClCompile Include="Bars.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -143,6 +144,7 @@
       <Filter>Engine\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Wipe.h" />
+    <ClInclude Include="Bars.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">

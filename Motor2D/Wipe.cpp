@@ -31,7 +31,9 @@ void Wipe::Entering()
 
 	float normalized_x_position = LerpValue(percent, -(int)width, 0);
 
-	rect.x = normalized_x_position;
+	if (normalized_x_position >= 0)
+		rect.x = 0;
+	else rect.x = normalized_x_position;
 
 	DrawRect();
 }
@@ -56,7 +58,9 @@ void Wipe::Exiting()
 
 	float normalized_x_position = LerpValue(percent, 0, -(int)width);
 
-	rect.x = normalized_x_position;
+	if(normalized_x_position <= -(int)width)
+		rect.x = -(int)width;
+	else rect.x = normalized_x_position;
 
 	DrawRect();
 }

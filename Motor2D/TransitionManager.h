@@ -38,6 +38,7 @@ public:
 	void CreateFadeTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 	void CreateZoomTransition(float transition_time, float scale = 2);
 	void CreateCameraTranslation(float transition_time, iPoint destination);
+	void CreateBarsTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 	void CreateWipeTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 
 	void DestroyTransition(Transition* transition_to_destroy);

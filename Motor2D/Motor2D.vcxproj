@@ -90,6 +90,7 @@
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Scene_01.cpp" />
     <ClCompile Include="Scene_02.cpp" />
+    <ClCompile Include="Bars.cpp" />
     <ClCompile Include="Textures.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Transition.cpp" />
@@ -117,6 +118,7 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Scene_01.h" />
     <ClInclude Include="Scene_02.h" />
+    <ClInclude Include="Bars.h" />
     <ClInclude Include="Textures.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Transition.h" />
