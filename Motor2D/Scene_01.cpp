@@ -37,23 +37,24 @@ bool Scene_01::PreUpdate()
 
 	iPoint world_mouse_position = App->render->ScreenToWorld(mouse_x, mouse_y);
 
-	if (App->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN)
-		App->transition_manager->CreateFadeTransition(1.0F, true, SCENE_02, Black);	
-	
-	if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN)
-		App->transition_manager->CreateZoomTransition(2.0F, 4.0F);
+	if (!App->transition_manager->transitioning)
+	{
 
-	if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN)
-		App->transition_manager->CreateCameraTranslation(2.0F, world_mouse_position);	
-	
-	if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
-		App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_02, Black);	
+		if (App->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN)
+			App->transition_manager->CreateFadeTransition(1.0F, true, SCENE_02, Black);
 
-	if (App->input->GetKey(SDL_SCANCODE_5) == KEY_DOWN)
-		App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_02, true, Black);
+		if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN)
+			App->transition_manager->CreateCameraTranslation(2.0F, world_mouse_position);
 
-	if (App->input->GetKey(SDL_SCANCODE_6) == KEY_DOWN)
-		App->transition_manager->CreateSquaresTransition(3.0F, true, SCENE_02, Black);
+		if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN)
+			App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_02, Black);
+
+		if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
+			App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_02, true, Black);
+
+		if (App->input->GetKey(SDL_SCANCODE_5) == KEY_DOWN)
+			App->transition_manager->CreateSquaresTransition(3.0F, true, SCENE_02, Black);
+	}
 
 	return true;
 }

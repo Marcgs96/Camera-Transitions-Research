@@ -43,6 +43,8 @@ public:
 	void CreateSquaresTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 
 	void DestroyTransition(Transition* transition_to_destroy);
+
+	bool transitioning = false;
 };
 
 #endif

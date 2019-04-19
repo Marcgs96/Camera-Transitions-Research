@@ -41,8 +41,6 @@ void Squares::Entering()
 {
 	Transition::Entering();
 
-	float percent = current_time->ReadSec()*(1 / transition_time);
-
 	int num_Bars = (int)LerpValue(percent, 0, total_squares_row_col * total_squares_row_col);
 
 	DrawSquares(num_Bars);
@@ -63,8 +61,6 @@ void Squares::Action()
 void Squares::Exiting()
 {
 	Transition::Exiting();
-
-	float percent = current_time->ReadSec()*(1 / transition_time);
 
 	int num_Bars = (int)LerpValue(percent, total_squares_row_col * total_squares_row_col, 0);
 

@@ -24,8 +24,6 @@ void Zoom::Entering()
 {
 	Transition::Entering();
 
-	float percent = current_time->ReadSec()*(1 / transition_time);
-
 	float normalized_scale = LerpValue(percent, normal_scale, target_scale);
 
 	float next_width = LerpValue(percent, start_width, final_width);
@@ -34,7 +32,6 @@ void Zoom::Entering()
 	float step_x = next_width - current_width;
 	float step_y = next_height - current_height;
 
-	LOG("%f", step_x);
 	App->render->camera.x += step_x;
 	App->render->camera.y += step_y;
 
@@ -42,14 +39,6 @@ void Zoom::Entering()
 	SDL_RenderSetScale(App->render->renderer, normalized_scale, normalized_scale);
 	current_height = next_height;
 	current_width = next_width;
-}
-
-void Zoom::Exiting()
-{
-	Transition::Exiting();
-
-	//current_scale = normal_scale;
-	//SDL_RenderSetScale(App->render->renderer, normal_scale, normal_scale);
 }
 
 void Zoom::SetTargetScale(int target_scale)

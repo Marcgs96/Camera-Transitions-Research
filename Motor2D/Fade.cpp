@@ -26,8 +26,6 @@ void Fade::Entering()
 {
 	Transition::Entering();
 
-	float percent = current_time->ReadSec()*(1 / transition_time);
-
 	float normalized_alpha = floor(LerpValue(percent, 0, 255));
 	DrawFadeRect(normalized_alpha);
 }
@@ -47,8 +45,6 @@ void Fade::Action()
 void Fade::Exiting()
 {
 	Transition::Exiting();
-
-	float percent = current_time->ReadSec()*(1 / transition_time);
 
 	float normalized_alpha = floor(LerpValue(percent, 255, 0));
 

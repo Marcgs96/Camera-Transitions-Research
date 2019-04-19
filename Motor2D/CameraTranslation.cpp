@@ -24,8 +24,6 @@ void CameraTranslation::Entering()
 {
 	Transition::Entering();
 
-	float percent = current_time->ReadSec()*(1 / transition_time);
-
 	float step_x = origin.x + percent * (destination.x - origin.x);
 	float step_y = origin.y + percent * (destination.y - origin.y);
 

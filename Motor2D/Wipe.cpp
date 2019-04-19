@@ -27,8 +27,6 @@ void Wipe::Entering()
 {
 	Transition::Entering();
 
-	float percent = current_time->ReadSec()*(1 / transition_time);
-
 	float normalized_x_position = LerpValue(percent, -(int)width, 0);
 
 	if (normalized_x_position >= 0)
@@ -53,8 +51,6 @@ void Wipe::Action()
 void Wipe::Exiting()
 {
 	Transition::Exiting();
-
-	float percent = current_time->ReadSec()*(1 / transition_time);
 
 	float normalized_x_position = LerpValue(percent, 0, -(int)width);
 

@@ -53,8 +53,6 @@ void Bars::Entering()
 {
 	Transition::Entering();
 
-	float percent = current_time->ReadSec()*(1 / transition_time);
-
 	int num_Bars = (int)LerpValue(percent, 0, 16*9);
 
 	DrawBars(num_Bars);
@@ -75,8 +73,6 @@ void Bars::Action()
 void Bars::Exiting()
 {
 	Transition::Exiting();
-
-	float percent = current_time->ReadSec()*(1 / transition_time);
 
 	int num_Bars = (int)LerpValue(percent, 16*9, 0);
 

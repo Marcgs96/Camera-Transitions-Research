@@ -13,6 +13,7 @@ Transition::Transition(float transition_time)
 
 	state = TransitionState::ENTERING;
 
+	App->transition_manager->transitioning = true;
 }
 
 
@@ -43,6 +44,8 @@ void Transition::PostUpdate()
 
 void Transition::Entering()
 {
+	percent = current_time->ReadSec()*(1 / transition_time);
+
 	if (current_time->ReadSec() >= transition_time)
 	{
 		state = TransitionState::ACTION;
@@ -57,9 +60,12 @@ void Transition::Action()
 
 void Transition::Exiting()
 {
+	percent = current_time->ReadSec()*(1 / transition_time);
+
 	if (current_time->ReadSec() >= transition_time)
 	{
 		state = TransitionState::NONE;
+		App->transition_manager->transitioning = false;
 		App->transition_manager->DestroyTransition(this);
 	}
 }

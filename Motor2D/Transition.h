@@ -22,6 +22,7 @@ protected:
 	float transition_time;
 	Timer* current_time = nullptr;
 
+	float percent = 0;
 
 public:
 
