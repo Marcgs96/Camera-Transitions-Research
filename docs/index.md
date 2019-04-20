@@ -150,7 +150,7 @@ The Scene class is an abstract class from which the various scenes of the projec
  
 ### The Transition
 
-#### The concept
+#### **The concept**
 
 When we talk about the basis of a transition, I propose this structure.
 
@@ -198,7 +198,7 @@ So thats where the Transition abstract class come from.
 		float LerpValue(float percent, float start, float end);
 	};
 
-#### My transitions
+#### **My transitions**
 
 - **Fade**
 
