@@ -14,7 +14,7 @@ A camera transition can also be a smooth movement of the camera through the scen
 
 In cinema, there’s no problem using a basic cut, because there are no existing delays or freezes between the scene change. So filmmakers use complex or more artistic transitions most commonly to spice up the narrative or move backward or forward in time.
 
-While in video games, when we change a scene, the game unloads the current scene and loads the entering scene information, making the game freeze for a small period of time. So if we don’t use any transition to ‘hide’ that freeze moment, the scene change will look really sketchy, poor or like a bug. Camera transitions are useful to tell the player; “ok, we are moving into another place of the game”.
+While in video games, when we change a scene, the game unloads the current scene and loads the entering scene information, making the game even freeze for a small period of time. So if we don’t use any transition to ‘hide’ that procces, the scene change will look really sketchy, poor or like a bug. Camera transitions are useful to tell the player; “ok, we are moving into another place of the game”.
 
 Like in films, we also use camera transitions with a narrative or aesthetic background.
 
@@ -148,5 +148,54 @@ The Scene class is an abstract class from which the various scenes of the projec
 	};
 
  
-### The Transitions
+### The Transition
+
+#### The concept
+
+When we talk about the basis of a transition, I propose this structure.
+
+![enter image description here](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/Transition_basic_structure.png?raw=true)
+
+Where:
+
+- **Entering** is the time before the scene change.
+- **Action** is the frame of the scene change.
+- **Exiting** is the time after the scene change.
+
+So thats where the Transition abstract class come from.
+
+	class Transition
+	{
+	private:
+		enum class TransitionState {
+			NONE,
+			ENTERING, //Before the scene change
+			ACTION, //The frame where the scene changes
+			EXITING //After the Scene change
+		};
+
+	protected:
+		TransitionState state;
+
+		float transition_time; // total transition entering and exiting time
+		Timer* current_time = nullptr; 
+
+		float percent = 0; //percent of the current respect the total time. It goes from 0 to 1
+
+	public:
+
+		Transition(float transition_time);
+		~Transition();
+
+		void PostUpdate();
+
+		//-----Update process-------
+
+		virtual void Entering();
+		virtual void Action();
+		virtual void Exiting();
+
+		float LerpValue(float percent, float start, float end);
+	};
+
 
