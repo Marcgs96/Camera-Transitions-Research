@@ -198,4 +198,40 @@ So thats where the Transition abstract class come from.
 		float LerpValue(float percent, float start, float end);
 	};
 
+#### My transitions
+
+- **Fade**
+
+[source code](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/Motor2D/Fade.cpp)
+
+![enter image description here](https://media.giphy.com/media/AixqkUyJanbsY9VYb2/giphy.gif)
+
+- **Camera Translation with simple Lerp**
+
+[source code](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/Motor2D/CameraTranslation.cpp)
+
+![enter image description here](https://media.giphy.com/media/LkxcOAdzTRAtHkePoG/giphy.gif)
+
+- **Wipe**
+
+[source code](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/Motor2D/Wipe.cpp)
+
+![enter image description here](https://media.giphy.com/media/VDe1FJ9MPiaI4TIort/giphy.gif)
+
+- **Bars Wipe**
+
+[source code](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/Motor2D/Bars.cpp)
+
+![enter image description here](https://media.giphy.com/media/lNRNBH4jymoJ73muWK/giphy.gif)
+
+- **Squares**
+
+[source code](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/Motor2D/Squares.cpp)
+
+![enter image description here](https://media.giphy.com/media/IbZjti8pOMMaRq3VOF/giphy.gif)
+
+### TODO's
+
+
+### Reference Links
 
