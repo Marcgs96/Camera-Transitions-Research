@@ -44,6 +44,8 @@ The use of shaders in camera transitions is very extended because it gives a lot
 
 ## My code implementation
 
+I decided to keep both functionalities (change of scene and transition) separate to work independently and keep the code as encapsulated as possible, in addition to allowing me to make a greater diversity of types of transitions and the possibility of having multiple active transitions at the same time.
+
 ### The SceneManager
 
 SceneManager is a module whose purpose is to control the behavior of the active scene and change the scene.
@@ -145,7 +147,6 @@ The Scene class is an abstract class from which the various scenes of the projec
 		bool transitioning = false;
 	};
 
-I decided to keep both functionalities (change of scene and transition) separate to work independently and keep the code as encapsulated as possible, in addition to allowing me to make a greater diversity of types of transitions and the possibility of having multiple active transitions at the same time.
  
 ### The Transitions
 
