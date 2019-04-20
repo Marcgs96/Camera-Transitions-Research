@@ -1,6 +1,6 @@
-## Camera Transitions
+# Camera Transitions
 
-### What are camera transitions?
+## What are camera transitions?
 
 In films or videos, camera transitions are a post-production technique used to connect one shot with another. Simple enough, but what about video games?
 
@@ -8,7 +8,7 @@ Although the purpose is practically the same. In videogames, camera transitions 
   
 A camera transition can also be a smooth movement of the camera through the scene, without the need for a scene change.
 
-### The reasons behind camera transitions
+## The reasons behind camera transitions
 
 **Why don’t we use just a basic cut where one scene is instantly replaced by the next one?**
 
@@ -18,7 +18,7 @@ While in video games, when we change a scene, the game unloads the current scene
 
 Like in films, we also use camera transitions with a narrative or aesthetic background.
 
-### Basic types of transitions
+## Basic types of transitions
 
  - **Fade In/out**
 
@@ -36,17 +36,17 @@ A dissolve overlaps two shots or scenes, gradually transitioning from one to the
 
 Zoom is when a camera shot that changes smoothly from a long shot to a close-up or vice versa.
 
-### The use of shaders in camera transitions
+## The use of shaders in camera transitions
 
 A shader is a piece of code that is executed on the Graphics Processing Unit (GPU), usually found on a graphics card, to manipulate an image before it is drawn to the screen.
 
 The use of shaders in camera transitions is very extended because it gives a lot of possibilities when creating a transition. I have not created any shader in my research because of its complexity and because it is not the focus of this research.
 
-## My code implementation
+# My code implementation
 
 I decided to keep both functionalities (change of scene and transition) separate to work independently and keep the code as encapsulated as possible, in addition to allowing me to make a greater diversity of types of transitions and the possibility of having multiple active transitions at the same time.
 
-### The SceneManager
+## The SceneManager
 
 SceneManager is a module whose purpose is to control the behavior of the active scene and change the scene.
 
@@ -109,7 +109,7 @@ The Scene class is an abstract class from which the various scenes of the projec
 		virtual bool Save(pugi::xml_node&) const { return true; };
 	};
 
-### The TransitionManager
+## The TransitionManager
 
  TransitionManager is a module that consists of a factory of transitions. Contains a container with active transitions and updates the behavior of them, in addition to the methods of creation and destruction of these.
 
@@ -148,9 +148,9 @@ The Scene class is an abstract class from which the various scenes of the projec
 	};
 
  
-### The Transition
+## The Transition
 
-#### **The concept**
+### **The concept**
 
 When we talk about the basis of a transition, I propose this structure.
 
@@ -198,7 +198,7 @@ So thats where the Transition abstract class come from.
 		float LerpValue(float percent, float start, float end);
 	};
 
-#### **My transitions**
+### **My transitions**
 
 - **Fade**
 
@@ -230,8 +230,8 @@ So thats where the Transition abstract class come from.
 
 ![enter image description here](https://media.giphy.com/media/IbZjti8pOMMaRq3VOF/giphy.gif)
 
-### TODO's
+## TODO's
 
 
-### Reference Links
+## Reference Links
 
