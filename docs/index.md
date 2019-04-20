@@ -17,3 +17,21 @@ In cinema, there’s no problem using a basic cut, because there are no existing
 While in video games, when we change a scene, the game unloads the current scene and loads the entering scene information, making the game freeze for a small period of time. So if we don’t use any transition to ‘hide’ that freeze moment, the scene change will look really sketchy, poor or like a bug. Camera transitions are useful to tell the player; “ok, we are moving into another place of the game”.
 
 Like in films, we also use camera transitions with a narrative or aesthetic background.
+
+## Most traditional types of transitions
+
+### Fade In/out - most common color is black
+
+A fade in is when the scene gradually turns to a single color, a fade out is exactly the opposite. Narratively, it often symbolizes the passage of time or signifies completion.
+
+### Wipe
+
+A wipe is when a shot travels from one side of the frame to the other, replacing the previous scene. We can also see wipes where a black image comes from one side of the camera hiding the outgoing scene, then the black image returns to its original position giving a view to the incoming scene.
+
+### Dissolves
+
+A dissolve overlaps two shots or scenes, gradually transitioning from one to the other. This one is much more common in films and videos due it's complexity in videogames.
+
+### Zoom
+
+Zoom is when a camera shot that changes smoothly from a long shot to a close-up or vice versa.
