@@ -117,10 +117,6 @@ The Scene class is an abstract class from which the various scenes of the projec
 	private:
 		std::list<Transition*> active_transitions;
 
-		//Util variables for diverse transitions
-		SDL_Rect screen;
-
-
 	public:
 		TransitionManager();
 		~TransitionManager();
@@ -134,7 +130,7 @@ The Scene class is an abstract class from which the various scenes of the projec
 		// Called before quitting
 		virtual bool CleanUp();
 
-		//--------------------------------
+		//-----Creation Methods-------
 
 		void CreateFadeTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 		void CreateZoomTransition(float transition_time, float scale = 2);
@@ -144,7 +140,8 @@ The Scene class is an abstract class from which the various scenes of the projec
 		void CreateSquaresTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 
 		void DestroyTransition(Transition* transition_to_destroy);
-
+		
+		//-----Is there any active transition?
 		bool transitioning = false;
 	};
 
