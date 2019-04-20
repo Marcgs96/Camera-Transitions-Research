@@ -11,18 +11,18 @@ class Transition
 private:
 	enum class TransitionState {
 		NONE,
-		ENTERING,
-		ACTION,
-		EXITING
+		ENTERING, //Before the scene change
+		ACTION, //The frame where the scene changes
+		EXITING //After the Scene change
 	};
 
 protected:
 	TransitionState state;
 
-	float transition_time;
-	Timer* current_time = nullptr;
+	float transition_time; // total transition entering and exiting time
+	Timer* current_time = nullptr; 
 
-	float percent = 0;
+	float percent = 0; //percent of the current respect the total time. It goes from 0 to 1
 
 public:
 
