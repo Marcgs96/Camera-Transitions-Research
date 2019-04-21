@@ -20,21 +20,33 @@ Like in films, we also use camera transitions with a narrative or aesthetic back
 
 ## Basic types of transitions
 
+### Basic types of transitions
+
  - **Fade In/out**
 
 A fade in is when the scene gradually turns to a single color, a fade out is exactly the opposite. Narratively, it often symbolizes the passage of time or signifies completion.
+
+![enter image description here](https://media.giphy.com/media/L4TlfmwLCC8PqV3JsS/giphy.gif)
 
  - **Wipe**
 
 A wipe is when a shot travels from one side of the frame to the other, replacing the previous scene. We can also see wipes where a black image comes from one side of the camera hiding the outgoing scene, then the black image returns to its original position giving a view to the incoming scene.
 
+![enter image description here](https://media.giphy.com/media/Q7vPyzebr3JSCMwmtO/giphy.gif)
+
+![enter image description here](https://media.giphy.com/media/ftfLka9bJfTJvCWXWl/giphy.gif)
 - **Dissolves**
 
 A dissolve overlaps two shots or scenes, gradually transitioning from one to the other. This one is much more common in films and videos due it's complexity in videogames.
 
+![enter image description here](https://media.giphy.com/media/SULCsHHnhqKdtmHkbC/giphy.gif)
+
 - **Zoom**
 
 Zoom is when a camera shot that changes smoothly from a long shot to a close-up or vice versa.
+
+![enter image description here](https://media.giphy.com/media/fA8Mqd6BIw9jvwwPUb/giphy.gif)
+
 
 ## The use of shaders in camera transitions
 
