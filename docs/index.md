@@ -57,6 +57,8 @@ The use of shaders in camera transitions is very extended because it gives a lot
 
 I decided to keep both functionalities (change of scene and transition) separate to work independently and keep the code as encapsulated as possible, in addition to allowing me to make a greater diversity of types of transitions and the possibility of having multiple active transitions at the same time.
 
+![core](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/Core_implementation.png?raw=true)
+
 ## The SceneManager
 
 SceneManager is a module whose purpose is to control the behavior of the active scene and change the scene.
