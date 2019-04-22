@@ -243,8 +243,26 @@ So thats where the Transition abstract class come from.
 
 ![enter image description here](https://media.giphy.com/media/IbZjti8pOMMaRq3VOF/giphy.gif)
 
-## TODO's
+### TODO's
+
+**Let's create a wipe transition where a rectangle slides in and out of the scene.**
+
+**TODO 01**
+
+Fill the method DrawRect() by setting the render draw color and telling the render to fill your rect.
 
 
-## Reference Links
 
+### Reference Links
+
+**About video transitions**
+
+- [Link 1](https://biteable.com/blog/tips/video-transitions-effects-examples/)
+- [Link 2](http://www.davetech.co.uk/screentransitions)
+
+**About Shaders**
+ - [Link](https://www.webopedia.com/TERM/S/shader.html)
+
+**Fan collection of transitions**
+
+- [Link](http://www.davetech.co.uk/screentransitions)
