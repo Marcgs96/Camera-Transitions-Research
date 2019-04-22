@@ -12,8 +12,6 @@ Wipe::Wipe(float transition_time, bool is_scene_change, int scene_to_change, Col
 	this->scene_to_change = scene_to_change;
 	this->color = color;
 
-
-
 	App->win->GetWindowSize(width, height);
 	rect = { -(int)width, 0, (int)width, (int)height };
 	SDL_SetRenderDrawBlendMode(App->render->renderer, SDL_BLENDMODE_BLEND);

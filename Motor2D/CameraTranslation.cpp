@@ -24,8 +24,8 @@ void CameraTranslation::Entering()
 {
 	Transition::Entering();
 
-	float step_x = origin.x + percent * (destination.x - origin.x);
-	float step_y = origin.y + percent * (destination.y - origin.y);
+	float step_x = LerpValue(percent, origin.x, destination.x);
+	float step_y = LerpValue(percent, origin.y, destination.y);
 
 
 	App->render->camera.x = step_x;
