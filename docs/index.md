@@ -249,7 +249,47 @@ So thats where the Transition abstract class come from.
 
 **TODO 01**
 
-Fill the method DrawRect() by setting the render draw color and telling the render to fill your rect.
+Fill the method DrawRect().
+
+![todo_01](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_01.png?raw=true)
+
+ - Solution
+ 
+![todo_01_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_01_SOLUTION.png?raw=true)
+
+**TODO 02**
+
+Implement the Entering of the wipe transition.
+
+![todo_02](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_02.png?raw=true)
+
+- Solution
+
+![todo_02_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_02_SOLUTION.png?raw=true)
+
+**TODO 03**
+
+![todo_03](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_03.png?raw=true)
+
+
+- Solution
+
+![todo_03_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_03_SOLUTION.png?raw=true)
+
+### Reference Links
+
+**About video transitions**
+
+- [Link 1](https://biteable.com/blog/tips/video-transitions-effects-examples/)
+- [Link 2](http://www.davetech.co.uk/screentransitions)
+
+**About Shaders**
+ - [Link](https://www.webopedia.com/TERM/S/shader.html)
+
+**Fan collection of transitions**
+
+- [Link](http://www.davetech.co.uk/screentransitions)
+
 
 
 
