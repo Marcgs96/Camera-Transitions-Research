@@ -45,13 +45,8 @@ void Wipe::Exiting()
 {
 	Transition::Exiting();
 
-	float normalized_x_position = LerpValue(percent, 0, -(int)width);
-
-	if(normalized_x_position <= -(int)width)
-		rect.x = -(int)width;
-	else rect.x = normalized_x_position;
-
-	DrawRect();
+	//TODO 04
+	//Pretty similar to the Entering one but reversed!
 }
 
 void Wipe::SetColor(Color color)

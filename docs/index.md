@@ -259,7 +259,7 @@ Fill the method DrawRect().
 
 **TODO 02**
 
-Implement the Entering of the wipe transition.
+Implement the Entering method of the wipe transition.
 
 ![todo_02](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_02.png?raw=true)
 
@@ -269,6 +269,8 @@ Implement the Entering of the wipe transition.
 
 **TODO 03**
 
+Implement the Action method of the wipe transition.
+
 ![todo_03](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_03.png?raw=true)
 
 
@@ -276,22 +278,16 @@ Implement the Entering of the wipe transition.
 
 ![todo_03_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_03_SOLUTION.png?raw=true)
 
-### Reference Links
+**TODO 04**
 
-**About video transitions**
+Implement the Exiting method of the wipe transition.
 
-- [Link 1](https://biteable.com/blog/tips/video-transitions-effects-examples/)
-- [Link 2](http://www.davetech.co.uk/screentransitions)
-
-**About Shaders**
- - [Link](https://www.webopedia.com/TERM/S/shader.html)
-
-**Fan collection of transitions**
-
-- [Link](http://www.davetech.co.uk/screentransitions)
+![todo_04](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_04.png?raw=true)
 
 
+- Solution
 
+![todo_04_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_04_SOLUTION.png?raw=true)
 
 ### Reference Links
 
@@ -306,3 +302,4 @@ Implement the Entering of the wipe transition.
 **Fan collection of transitions**
 
 - [Link](http://www.davetech.co.uk/screentransitions)
+
