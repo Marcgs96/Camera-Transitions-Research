@@ -9,12 +9,13 @@ This project contains a functional scene and transition management system. It co
 You can find my research in [this](https://marcgs96.github.io/Camera-Transitions-Research/) website.
 
 ### Controls
-[1]: Execute Fade Transition.
-[2]: Execute Camera translation to the mouse position.
-[3]: Execute Wipe Transition
-[4]: Executre Bars Wipe Transition
-[5]: Executre Squares Transition
-[6]: Executre Zoom Transition
+
+- [1]: Execute Fade Transition.
+- [2]: Execute Camera translation to the mouse position.
+- [3]: Execute Wipe Transition
+- [4]: Executre Bars Wipe Transition
+- [5]: Executre Squares Transition
+- [6]: Executre Zoom Transition
 
 ### Software used
 

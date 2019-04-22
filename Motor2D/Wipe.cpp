@@ -66,6 +66,10 @@ void Wipe::SetColor(Color color)
 
 void Wipe::DrawRect()
 {
+	//TODO 01
+	//Fill the method DrawRect() by setting the render draw color and telling the render to fill your rect.
+
+	//SOLUTION
 	SDL_SetRenderDrawColor(App->render->renderer, color.r, color.g, color.b, 255);
 	SDL_RenderFillRect(App->render->renderer, &rect);
 }
