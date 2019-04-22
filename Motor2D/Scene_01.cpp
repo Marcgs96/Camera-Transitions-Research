@@ -56,7 +56,7 @@ bool Scene_01::PreUpdate()
 			App->transition_manager->CreateSquaresTransition(3.0F, true, SCENE_02, Black);
 
 		if (App->input->GetKey(SDL_SCANCODE_6) == KEY_DOWN)
-			App->transition_manager->CreateZoomTransition(3.0F);
+			App->transition_manager->CreateZoomTransition(3.0F, 2.0F);
 	}
 
 	return true;

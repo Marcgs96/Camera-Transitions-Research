@@ -7,7 +7,7 @@
 
 Zoom::Zoom(float transition_time, float target_scale) : Transition(transition_time)
 {
-	this->target_scale = target_scale/2;
+	this->target_scale = target_scale;
 	start_width = App->render->camera.w;
 	start_height = App->render->camera.h;
 	final_width = App->render->camera.w / target_scale;
