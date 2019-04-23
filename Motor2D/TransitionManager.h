@@ -39,8 +39,10 @@ public:
 	void CreateZoomTransition(float transition_time, float scale = 2);
 	void CreateCameraTranslation(float transition_time, iPoint destination);
 	void CreateBarsTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, bool horizontal = false, Color color = Black);
-	void CreateWipeTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
 	void CreateSquaresTransition(float transition_time, bool is_scene_change = false, int scene_to_transition = 0, Color color = Black);
+
+	//TODO 05
+	//Define a CreateWipeTransition method for your transitionmanager
 
 	void DestroyTransition(Transition* transition_to_destroy);
 

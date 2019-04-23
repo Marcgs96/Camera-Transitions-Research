@@ -71,11 +71,6 @@ void TransitionManager::CreateBarsTransition(float transition_time, bool is_scen
 	active_transitions.push_back(new Bars(transition_time, is_scene_change, scene_to_transition, horizontal, color));
 }
 
-void TransitionManager::CreateWipeTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
-{
-	active_transitions.push_back(new Wipe(transition_time, is_scene_change, scene_to_transition, color));
-}
-
 void TransitionManager::CreateSquaresTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
 {
 	active_transitions.push_back(new Squares(transition_time, is_scene_change, scene_to_transition, color));
@@ -86,3 +81,6 @@ void TransitionManager::DestroyTransition(Transition * transition_to_destroy)
 	active_transitions.remove(transition_to_destroy);
 	delete transition_to_destroy;
 }
+
+//TODO 05
+//Create a new Wipe transition and add it to the active_transitions vector

@@ -289,6 +289,31 @@ Implement the Exiting method of the wipe transition.
 
 ![todo_04_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_04_SOLUTION.png?raw=true)
 
+**TODO 05**
+
+Create a CreateWipeTransition method in your TransitionManager.
+
+![todo_05_01](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_05_01.png?raw=true)
+
+![todo_05_02](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_05_02.png?raw=true)
+
+- Solution
+
+![todo_05_solution_01](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_05_SOLUTION_01.png?raw=true)
+
+![todo_05_solution_02](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_05_SOLUTION_02.png?raw=true)
+
+**TODO 06**
+
+Uncomment this code and introduce a case for your wipe transition! Try all transitions and choose one possible for your game or try design another one.
+
+![todo_06](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_06.png?raw=true)
+
+
+- Solution
+
+![todo_06_solution](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/docs/images/TODO_06_SOLUTION.png?raw=true)
+
 ### Reference Links
 
 **About video transitions**

@@ -44,8 +44,8 @@ bool Scene_02::PreUpdate()
 		if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN)
 			App->transition_manager->CreateCameraTranslation(2.0F, world_mouse_position);
 
-		if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN)
-			App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_01, Black);
+		/*if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN)
+			App->transition_manager->CreateWipeTransition(1.0F, true, SCENE_01, Black);*/
 
 		if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
 			App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_01, false, Black);
