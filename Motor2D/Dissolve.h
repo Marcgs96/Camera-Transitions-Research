@@ -3,6 +3,7 @@
 
 
 class SDL_Texture;
+class SDL_Surface;
 
 class Dissolve :
 	public Transition
@@ -14,7 +15,9 @@ private:
 
 	uint width, height;
 
-	SDL_Texture* text = nullptr;
+	SDL_Texture* target_text = nullptr;
+	SDL_Texture* capture_text = nullptr;
+	SDL_Surface* capture_surf = nullptr;
 	SDL_Rect rect;
 
 public:

@@ -8,7 +8,7 @@
 
 class Transition
 {
-private:
+protected:
 	enum class TransitionState {
 		NONE,
 		ENTERING, //Before the scene change

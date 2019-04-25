@@ -17,7 +17,9 @@ Dissolve::Dissolve(float transition_time, int scene_to_change) : Transition(tran
 	rect = { 0, 0, (int)width, (int)height };
 	SDL_SetRenderDrawBlendMode(App->render->renderer, SDL_BLENDMODE_BLEND);
 
-	text = SDL_CreateTexture(App->render->renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, width, height);
+	target_text = SDL_CreateTexture(App->render->renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, width, height);
+	SDL_SetTextureBlendMode(target_text, SDL_BLENDMODE_BLEND);
+
 }
 
 Dissolve::~Dissolve()
@@ -26,17 +28,14 @@ Dissolve::~Dissolve()
 
 void Dissolve::Entering()
 {
-	Transition::Entering();
+	state = TransitionState::ACTION;
 }
 
 void Dissolve::Action()
 {
-	SDL_SetRenderTarget(App->render->renderer, text);
-	SDL_SetTextureBlendMode(text, SDL_BLENDMODE_BLEND);
+	Transition::Action();
 
 	App->scene_manager->ChangeScene(scene_to_change);
-
-	Transition::Action();
 }
 
 void Dissolve::Exiting()
@@ -44,11 +43,21 @@ void Dissolve::Exiting()
 	Transition::Exiting();
 
 	float alpha = LerpValue(percent, 255, 0);
+	int amod = SDL_SetTextureAlphaMod(target_text, alpha);
+	LOG("amod %i alpha %f", amod, alpha);
 
-	SDL_SetTextureAlphaMod(text, alpha);
+	SDL_SetRenderTarget(App->render->renderer, target_text);
 
-	if (current_time->ReadSec() >= transition_time)
-	{
-		SDL_SetRenderTarget(App->render->renderer, NULL);
-	}
+	//Clear screen
+	SDL_SetRenderDrawColor(App->render->renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+	SDL_RenderClear(App->render->renderer);
+
+	//Reset render target
+	SDL_SetRenderTarget(App->render->renderer, NULL);
+
+	//Show rendered to texture
+	SDL_RenderCopy(App->render->renderer, target_text, NULL, NULL);
+
+	//Update screen
+	SDL_RenderPresent(App->render->renderer);
 }
