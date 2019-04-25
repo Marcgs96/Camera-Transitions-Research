@@ -40,24 +40,27 @@ bool Scene_01::PreUpdate()
 	if (!App->transition_manager->transitioning)
 	{
 
-		/*if (App->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN)
+		if (App->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN)
 			App->transition_manager->CreateFadeTransition(1.0F, true, SCENE_02, Black);
 
 		if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN)
-			App->transition_manager->CreateCameraTranslation(1.0F, world_mouse_position);*/
+			App->transition_manager->CreateCameraTranslation(1.0F, world_mouse_position);
 
 		//TODO 06
 		//Uncomment this code and introduce a case for your wipe transition!
 		//Try all transitions and choose one possible for your game or try design another one.
 
-		/*if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
+		if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN)
 			App->transition_manager->CreateBarsTransition(3.0F, true, SCENE_02, true, Black);
 
 		if (App->input->GetKey(SDL_SCANCODE_5) == KEY_DOWN)
 			App->transition_manager->CreateSquaresTransition(3.0F, true, SCENE_02, Black);
 
 		if (App->input->GetKey(SDL_SCANCODE_6) == KEY_DOWN)
-			App->transition_manager->CreateZoomTransition(3.0F, 2.0F);*/
+			App->transition_manager->CreateZoomTransition(3.0F, 2.0F);
+
+		if (App->input->GetKey(SDL_SCANCODE_7) == KEY_DOWN)
+			App->transition_manager->CreateDissolveTransition(3.0F, SCENE_02);
 	}
 
 	return true;

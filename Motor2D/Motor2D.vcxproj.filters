@@ -71,6 +71,7 @@
       <Filter>Engine\Transitions</Filter>
     </ClCompile>
     <ClCompile Include="Squares.cpp" />
+    <ClCompile Include="Dissolve.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -155,6 +156,7 @@
       <Filter>Engine\Transitions</Filter>
     </ClInclude>
     <ClInclude Include="Squares.h" />
+    <ClInclude Include="Dissolve.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
