@@ -26,25 +26,25 @@ Like in films, we also use camera transitions with a narrative or aesthetic back
 
 A fade in is when the scene gradually turns to a single color, a fade out is exactly the opposite. Narratively, it often symbolizes the passage of time or signifies completion.
 
-[Fade to White](https://vimeo.com/124885316)
+![enter image description here](https://media.giphy.com/media/JUXanPn5SjGgNzn9lf/giphy.gif)
 
  - **Wipe**
 
 A wipe is when a shot travels from one side of the frame to the other, replacing the previous scene. We can also see wipes where a black image comes from one side of the camera hiding the outgoing scene, then the black image returns to its original position giving a view to the incoming scene.
 
-[Star Wars Wipe compilation](https://youtu.be/cGqAu9gj_F0)
+![enter image description here](https://media.giphy.com/media/XDdHENx4GgG9qiFMfu/giphy.gif)
 
 - **Dissolves**
 
-A dissolve overlaps two shots or scenes, gradually transitioning from one to the other. This one is much more common in films and videos due it's complexity in videogames.
+A dissolve overlaps two shots or scenes, gradually transitioning from one to the other.
 
-[Dissolve examples](https://youtu.be/DTPctDhOCzE)
+![enter image description here](https://media.giphy.com/media/J6V3UX7i0MrpcCh4Gi/giphy.gif)
 
 - **Zoom**
 
 Zoom is when a camera shot that changes smoothly from a long shot to a close-up or vice versa.
 
-[Zoom examples](https://youtu.be/iWGvt3KkfqU)
+![enter image description here](https://media.giphy.com/media/iDlcfvCMIQmqRpdkHy/giphy.gif)
 
 
 ## The use of shaders in camera transitions
@@ -327,4 +327,5 @@ Uncomment this code and introduce a case for your wipe transition! Try all trans
 **Fan collection of transitions**
 
 - [Link](http://www.davetech.co.uk/screentransitions)
+
 
