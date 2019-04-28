@@ -16,6 +16,7 @@ You can find my research in [this](https://marcgs96.github.io/Camera-Transitions
 - [4]: Executre Bars Wipe Transition
 - [5]: Executre Squares Transition
 - [6]: Executre Zoom Transition
+- [7]: Execute Dissolve
 
 ### Software used
 
