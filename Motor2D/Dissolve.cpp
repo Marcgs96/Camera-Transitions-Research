@@ -1,10 +1,11 @@
 #include "Dissolve.h"
 #include "SceneManager.h"
-#include "j1App.h"
 #include "Render.h"
 #include "Window.h"
 #include "p2Log.h"
 #include "Render.h"
+
+#include "j1App.h"
 
 Dissolve::Dissolve(float transition_time, int scene_to_change) : Transition(transition_time)
 {
@@ -12,13 +13,25 @@ Dissolve::Dissolve(float transition_time, int scene_to_change) : Transition(tran
 	this->color = color;
 
 	uint width, height;
+	int w, h;
 	App->win->GetWindowSize(width, height);
 
-	rect = { 0, 0, (int)width, (int)height };
+	rect = { 0, 0, (int)width, (int)(height) };
 	SDL_SetRenderDrawBlendMode(App->render->renderer, SDL_BLENDMODE_BLEND);
 
 	target_text = SDL_CreateTexture(App->render->renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, width, height);
 	SDL_SetTextureBlendMode(target_text, SDL_BLENDMODE_BLEND);
+
+	capture_surf = SDL_CreateRGBSurface(0, width, height-19, 32, 0x00ff0000, 0x0000ff00, 0x000000ff, 0xff000000);
+	SDL_RenderReadPixels(App->render->renderer, &rect, SDL_GetWindowPixelFormat(App->win->window), capture_surf->pixels, capture_surf->pitch);
+	SDL_SaveBMP(capture_surf, "screenshot.bmp");
+	capture_text = App->tex->Load("screenshot.bmp");
+	if (capture_text == NULL) {
+		fprintf(stderr, "CreateTextureFromSurface failed: %s\n", SDL_GetError());
+		exit(1);
+	}
+	// Destroy the screenshot surface
+	SDL_FreeSurface(capture_surf);
 
 }
 
@@ -40,24 +53,13 @@ void Dissolve::Action()
 
 void Dissolve::Exiting()
 {
-	Transition::Exiting();
 
 	float alpha = LerpValue(percent, 255, 0);
-	int amod = SDL_SetTextureAlphaMod(target_text, alpha);
+	int amod = SDL_SetTextureAlphaMod(capture_text, alpha);
 	LOG("amod %i alpha %f", amod, alpha);
 
-	SDL_SetRenderTarget(App->render->renderer, target_text);
-
-	//Clear screen
-	SDL_SetRenderDrawColor(App->render->renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-	SDL_RenderClear(App->render->renderer);
-
-	//Reset render target
-	SDL_SetRenderTarget(App->render->renderer, NULL);
-
 	//Show rendered to texture
-	SDL_RenderCopy(App->render->renderer, target_text, NULL, NULL);
+	SDL_RenderCopy(App->render->renderer, capture_text, NULL, NULL);
 
-	//Update screen
-	SDL_RenderPresent(App->render->renderer);
+	Transition::Exiting();
 }

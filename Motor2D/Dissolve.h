@@ -1,9 +1,7 @@
 #pragma once
 #include "Transition.h"
+#include "Textures.h"
 
-
-class SDL_Texture;
-class SDL_Surface;
 
 class Dissolve :
 	public Transition

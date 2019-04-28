@@ -218,6 +218,9 @@ So thats where the Transition abstract class come from.
 [source code](https://github.com/Marcgs96/Camera-Transitions-Research/blob/master/Motor2D/Fade.cpp)
 
 ![enter image description here](https://media.giphy.com/media/AixqkUyJanbsY9VYb2/giphy.gif)
+- **Dissolve**
+
+![enter image description here](https://media.giphy.com/media/WUZUNcQWp2PTyrMtrn/giphy.gif)
 
 - **Camera Translation with simple Lerp**
 
@@ -327,5 +330,6 @@ Uncomment this code and introduce a case for your wipe transition! Try all trans
 **Fan collection of transitions**
 
 - [Link](http://www.davetech.co.uk/screentransitions)
+
 
 
