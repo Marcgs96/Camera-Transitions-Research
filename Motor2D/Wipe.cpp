@@ -24,29 +24,39 @@ Wipe::~Wipe()
 void Wipe::Entering()
 {
 	Transition::Entering();
-	
-	//TODO 02
-	//Save your current interpolation value in a local variable. Use the LerpValue() function
-	//We want the rect to cover the whole screen, make sure this new value is not bigger than 0
-	//Assign it to the rect x attribute.
-	//Remember to draw the rect
+
+	float normalized_x_position = LerpValue(percent, -(int)width, 0);
+
+	if (normalized_x_position >= 0)
+		rect.x = 0;
+	else rect.x = normalized_x_position;
+
+	DrawRect();
 }
 
 void Wipe::Action()
 {
 	Transition::Action();
 
-	//TODO 03
-	//Its time to make the scene change, remember to check if this is a scene change transition or not, 
-	//draw the rect!
+	DrawRect();
+
+	if (is_scene_change)
+	{
+		App->scene_manager->ChangeScene(scene_to_change);
+	}
 }
 
 void Wipe::Exiting()
 {
 	Transition::Exiting();
 
-	//TODO 04
-	//Pretty similar to the Entering one but reversed!
+	float normalized_x_position = LerpValue(percent, 0, -(int)width);
+
+	if (normalized_x_position <= -(int)width)
+		rect.x = -(int)width;
+	else rect.x = normalized_x_position;
+
+	DrawRect();
 }
 
 void Wipe::SetColor(Color color)
@@ -56,7 +66,6 @@ void Wipe::SetColor(Color color)
 
 void Wipe::DrawRect()
 {
-	//TODO 01
-	//Fill the method DrawRect() by setting the render draw color and telling the render to fill your rect.
-	//Remember to use your variables color and rect.
+	SDL_SetRenderDrawColor(App->render->renderer, color.r, color.g, color.b, 255);
+	SDL_RenderFillRect(App->render->renderer, &rect);
 }

@@ -82,6 +82,11 @@ void TransitionManager::CreateDissolveTransition(float transition_time, int scen
 	active_transitions.push_back(new Dissolve(transition_time, scene_to_transition));
 }
 
+void TransitionManager::CreateWipeTransition(float transition_time, bool is_scene_change, int scene_to_transition, Color color)
+{
+	active_transitions.push_back(new Wipe(transition_time, is_scene_change, scene_to_transition, color));
+}
+
 void TransitionManager::DestroyTransition(Transition * transition_to_destroy)
 {
 	active_transitions.remove(transition_to_destroy);
